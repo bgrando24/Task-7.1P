@@ -18,10 +18,18 @@ public class LostFoundItemAdapter extends RecyclerView.Adapter<LostFoundItemAdap
 
     private List<LostFoundItem> lostFoundItemList;
     private Context context;
+    private OnItemClickListener onItemClickListener;
 
-    public LostFoundItemAdapter(Context context, List<LostFoundItem> lostFoundItemList) {
+
+//    required for setting onclick listener for each item in recycler view
+    public interface OnItemClickListener {
+        void onItemClick(LostFoundItem item);
+    }
+
+    public LostFoundItemAdapter(Context context, List<LostFoundItem> lostFoundItemList, OnItemClickListener onItemClickListener) {
         this.context = context;
         this.lostFoundItemList = lostFoundItemList;
+        this.onItemClickListener = onItemClickListener;
     }
 
     @NonNull
@@ -35,7 +43,7 @@ public class LostFoundItemAdapter extends RecyclerView.Adapter<LostFoundItemAdap
     public void onBindViewHolder(@NonNull LostFoundItemViewHolder holder, int position) {
         LostFoundItem item = lostFoundItemList.get(position);
         holder.lostFoundItemTextView.setText(item.getName());
-        // set other views in the holder as needed
+        holder.itemView.setOnClickListener(v -> onItemClickListener.onItemClick(item));
     }
 
     @Override
@@ -49,7 +57,6 @@ public class LostFoundItemAdapter extends RecyclerView.Adapter<LostFoundItemAdap
         public LostFoundItemViewHolder(@NonNull View itemView) {
             super(itemView);
             lostFoundItemTextView = itemView.findViewById(R.id.lostFoundItemTextView);
-            // initialize other views in the layout as needed
         }
     }
 }

@@ -14,7 +14,7 @@
         android:layout_marginStart="176dp"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="177dp"
-        android:text="Lost & Found Items"
+        android:text="Lost and Found Items"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
