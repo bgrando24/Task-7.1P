@@ -3,8 +3,6 @@ package com.example.task_71p;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import java.io.Serializable;
-
 /**
  * Represents a lost/found post
  */

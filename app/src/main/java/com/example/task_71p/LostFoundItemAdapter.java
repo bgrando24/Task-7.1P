@@ -11,9 +11,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-/**
- * Provides an adapter for LostFoundItem objects and the recycler view
- */
 public class LostFoundItemAdapter extends RecyclerView.Adapter<LostFoundItemAdapter.LostFoundItemViewHolder> {
 
     private List<LostFoundItem> lostFoundItemList;

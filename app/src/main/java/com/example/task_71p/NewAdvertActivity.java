@@ -31,7 +31,7 @@ public class NewAdvertActivity extends AppCompatActivity {
         EditText itemDate = findViewById(R.id.itemDate);
         EditText itemLocationEditText = findViewById(R.id.itemLocationEditText);
 
-//        get which radio button (post type) is selected
+//        for getting which radio button (post type) is selected
         RadioButton lostRadioButton = findViewById(R.id.lostRadioButton);
         RadioButton foundRadioButton = findViewById(R.id.foundRadioButton);
 
